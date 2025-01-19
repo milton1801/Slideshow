@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<script>
+  var i = 0; // Start point
+  var images = [];
+  var time = 3000;
+
+  // Image list
+  images[0]=" CHI.jpg";
+  images[1]=" Egi.jpg.webp";
+  images[2]=" IND.jpg";
+  images[3]=" MEX.jpg";
+  images[4]=" Pal.jpg";
+  images[5]=" PER.jpg.webp";
+  images[6]=" ROM.jpg";
+
+  // Chnage image
+  function changeImg(){
+    document.slide.src = images[i];
+    if(i < images.length -1){
+      i++;
+    }else{
+      i=0;
+    }
+    setTimeout("changeImg()",time);
+  }
+  window.onload = changeImg;
+</script>
+<body>
+  <img name ="slide" width="100%" height="100%">
+  
+</body>
+</html>
